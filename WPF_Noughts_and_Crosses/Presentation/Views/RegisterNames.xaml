@@ -1,0 +1,45 @@
+﻿<Window x:Class="WPF_Noughts_and_Crosses.Presentation.Views.RegisterNames"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Noughts_and_Crosses.Presentation.Views" xmlns:local1="clr-namespace:WPF_Noughts_and_Crosses.Presentation.ViewModels"
+        mc:Ignorable="d"
+        Title="Register Names" Height="560" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WPF_Noughts_and_Crosses;component/Presentation/Styles/AppStyles.xaml">
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.DataContext>
+        <local1:GameViewModel/>
+    </Window.DataContext>
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Source="../Images/ttt.jpg" Stretch="Fill" Grid.ColumnSpan="3" Grid.RowSpan="6" />
+        <Label Grid.Column="0" Grid.Row="3" Content="Player X Name:" Foreground="Azure" FontSize="24" Margin="0 10" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Label Grid.Column="0" Grid.Row="4" Content="Player O Name:" Foreground="Azure" FontSize="24" Margin="0 10" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Button Grid.Column="1" Grid.Row="5" Content="Register Names" Margin="10 20 10 20" Click="RegisterNames_Click" Style="{DynamicResource WindowButtonStyle}"/>
+        <!--1:left 2: top 3: right 4: bottom -->
+        <TextBox Grid.Column="1" Grid.Row="3" Name="_playerX" Margin="50 30 50 20" FontSize="24"/>
+        <TextBox Grid.Column="1" Grid.Row="4" Name="_playerO" Margin="50 30 50 20" FontSize="24"/>
+        <TextBlock FontSize="16" Foreground="Red" Text="{Binding MessageContext}" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        
+    </Grid>
+</Window>
