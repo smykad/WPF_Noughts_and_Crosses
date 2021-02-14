@@ -41,12 +41,12 @@ namespace WPF_Noughts_and_Crosses.Presentation.ViewModels
 
             if (!isValidPlayerX)
             {
-                MessageContext = "Player X not valid name";
+                MessageContext = "Invalid Player Name";
                 
             }
             if (!isValidPlayerO)
             {
-                _message = "Player O not valid name";
+                _message = "Invalid Player Name";
                 OnPropertyChanged(nameof(MessageContext));
             }
 
