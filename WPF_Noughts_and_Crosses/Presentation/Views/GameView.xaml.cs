@@ -50,7 +50,11 @@ namespace WPF_Noughts_and_Crosses.Presentation.Views
                     Close();
                     _gameViewModel.GameCommand(windowButton.Name);
                     break;
-            }
+                case "Help":
+                    Help helpWindow = new Help();
+                    helpWindow.Show();
+                    break;
+            }   
 
         }
     }

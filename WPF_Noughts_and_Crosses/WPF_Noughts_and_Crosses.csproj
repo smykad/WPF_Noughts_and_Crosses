@@ -71,6 +71,9 @@
     <Compile Include="Presentation\Views\GameView.xaml.cs">
       <DependentUpon>GameView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Views\Help.xaml.cs">
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Views\RegisterNames.xaml.cs">
       <DependentUpon>RegisterNames.xaml</DependentUpon>
     </Compile>
@@ -111,6 +114,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Presentation\Views\Help.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentation\Views\RegisterNames.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -131,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Presentation\Images\startpage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentation\Images\helpwindow.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

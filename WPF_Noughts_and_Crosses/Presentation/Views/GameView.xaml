@@ -91,6 +91,7 @@
                     <Button x:Name="NewGame" Content="New Game" Style="{DynamicResource WindowButtonStyle}" Click="WindowButton_Click"/>
                     <Button x:Name="ResetGame" Content="Reset Game" Style="{DynamicResource WindowButtonStyle}" Click="WindowButton_Click"/>
                     <Button x:Name="Quit" Content="Quit" Style="{DynamicResource WindowButtonStyle}" Click="WindowButton_Click"/>
+                    <Button x:Name="Help" Content="Help" Style="{DynamicResource WindowButtonStyle}" Click="WindowButton_Click"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
